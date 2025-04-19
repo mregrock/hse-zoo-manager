@@ -13,5 +13,5 @@ public record EnclosureDto(
     double size,
     int maxCapacity,
     int currentAnimalCount,
-    Set<UUID> animalIds // Optionally include the list of animal IDs
+    Set<UUID> animalIds
 ) {} 

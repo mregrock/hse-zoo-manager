@@ -10,7 +10,7 @@ import java.util.UUID;
 public record FeedingScheduleDto(
     UUID id,
     UUID animalId,
-    String animalName, // Include animal name for better display
+    String animalName,
     LocalDateTime feedingTime,
     FoodType foodType,
     boolean completed

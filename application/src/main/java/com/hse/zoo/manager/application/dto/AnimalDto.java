@@ -17,5 +17,5 @@ public record AnimalDto(
     Gender gender,
     FoodType favoriteFood,
     AnimalStatus status,
-    UUID enclosureId // Can be null
+    UUID enclosureId
 ) {} 

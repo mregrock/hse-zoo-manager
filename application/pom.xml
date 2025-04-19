@@ -23,18 +23,10 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!-- Spring Context для аннотаций @Service, @Autowired, событий и т.д. -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
-        <!-- Зависимость на Jakarta Validation API (опционально, для валидации DTO или команд) -->
-        <!-- 
-         <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-        </dependency> 
-        -->
     </dependencies>
 
 </project> 

@@ -28,7 +28,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Boot BOM for consistent dependency versions -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -37,7 +36,6 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- Project Modules -->
             <dependency>
                 <groupId>com.hse.zoo.manager</groupId>
                 <artifactId>domain</artifactId>
@@ -59,7 +57,6 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- Common Libraries -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -85,7 +82,7 @@
                  <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.11.0</version> <!-- Use a recent version -->
+                    <version>3.11.0</version>
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
@@ -95,7 +92,6 @@
                                 <artifactId>lombok</artifactId>
                                 <version>${lombok.version}</version>
                             </path>
-                            <!-- Add other annotation processors if needed -->
                         </annotationProcessorPaths>
                     </configuration>
                 </plugin>

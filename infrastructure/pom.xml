@@ -14,12 +14,10 @@
     <name>Infrastructure Layer</name>
 
     <dependencies>
-        <!-- Зависимость от Application необходима для реализации его интерфейсов (например, репозиториев) -->
         <dependency>
             <groupId>com.hse.zoo.manager</groupId>
             <artifactId>application</artifactId>
         </dependency>
-        <!-- Зависимость от Domain также нужна, т.к. репозитории работают с доменными сущностями -->
         <dependency>
             <groupId>com.hse.zoo.manager</groupId>
             <artifactId>domain</artifactId>
@@ -29,23 +27,10 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!-- Spring Context необходим для аннотаций @Repository, @Component и т.д. -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
-        <!-- Другие зависимости инфраструктуры (например, драйверы БД, клиенты внешних сервисов) -->
-        <!-- 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency> 
-        -->
     </dependencies>
 
 </project> 

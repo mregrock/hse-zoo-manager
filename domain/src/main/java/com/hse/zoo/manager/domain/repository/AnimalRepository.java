@@ -41,7 +41,4 @@ public interface AnimalRepository {
    */
   void deleteById(UUID id);
 
-  // Add other specific query methods if needed, e.g.:
-  // List<Animal> findBySpecies(String species);
-  // List<Animal> findByEnclosureId(UUID enclosureId);
 } 

@@ -41,7 +41,4 @@ public interface EnclosureRepository {
    */
   void deleteById(UUID id);
 
-  // Add other specific query methods if needed, e.g.:
-  // List<Enclosure> findByType(EnclosureType type);
-  // List<Enclosure> findAvailable(int requiredCapacity);
 } 

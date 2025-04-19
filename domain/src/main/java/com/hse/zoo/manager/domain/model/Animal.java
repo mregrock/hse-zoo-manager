@@ -111,7 +111,7 @@ public class Animal {
    * @param newEnclosureId The ID of the new enclosure.
    * @return The ID of the previous enclosure (can be null).
    */
-  UUID moveToEnclosureInternal(UUID newEnclosureId) {
+  public UUID moveToEnclosureInternal(UUID newEnclosureId) {
     System.out.println("Moving " + name + " to enclosure " + newEnclosureId);
     UUID oldEnclosureId = this.enclosureId;
     this.enclosureId = newEnclosureId;
@@ -121,7 +121,7 @@ public class Animal {
   /**
    * Internal method to remove the animal from its current enclosure.
    */
-  void removeFromEnclosureInternal() {
+  public void removeFromEnclosureInternal() {
     if (this.enclosureId != null) {
       System.out.println("Removing " + name + " from enclosure " + this.enclosureId);
       this.enclosureId = null;

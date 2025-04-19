@@ -56,6 +56,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <configuration>
+                    <mainClass>com.hse.zoo.manager.ZooManagementApplication</mainClass>
+                 </configuration>
                  <executions>
                     <execution>
                         <goals>

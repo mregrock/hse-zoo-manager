@@ -53,7 +53,7 @@ public class Enclosure {
    * @param animalId The ID of the animal to add.
    * @throws IllegalStateException if the enclosure is full or the animal is already inside.
    */
-  void addAnimalInternal(UUID animalId) {
+  public void addAnimalInternal(UUID animalId) {
     Objects.requireNonNull(animalId, "Animal ID cannot be null");
     if (!canAddAnimal()) {
       throw new IllegalStateException("Enclosure with id " + id + " is full.");
@@ -71,8 +71,8 @@ public class Enclosure {
    * @param animalId The ID of the animal to remove.
    * @throws IllegalStateException if the animal is not found in this enclosure.
    */
-  void removeAnimalInternal(UUID animalId) {
-     Objects.requireNonNull(animalId, "Animal ID cannot be null");
+  public void removeAnimalInternal(UUID animalId) {
+    Objects.requireNonNull(animalId, "Animal ID cannot be null");
     if (!this.animalIds.remove(animalId)) {
       throw new IllegalStateException(
           "Animal with id " + animalId + " not found in enclosure " + id);

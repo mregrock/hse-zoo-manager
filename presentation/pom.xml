@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hse.zoo.manager</groupId>
+        <artifactId>hse-zoo-manager</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>presentation</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Presentation Layer (Web API)</name>
+
+    <dependencies>
+        <!-- Зависимость от Application необходима для вызова сервисов приложения -->
+        <dependency>
+            <groupId>com.hse.zoo.manager</groupId>
+            <artifactId>application</artifactId>
+        </dependency>
+        <!-- Зависимость от Domain может быть нужна для DTO или возвращения доменных исключений -->
+        <dependency>
+            <groupId>com.hse.zoo.manager</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
+        <!-- Зависимость от Infrastructure нужна во время выполнения для внедрения зависимостей (например, репозиториев) -->
+         <dependency>
+            <groupId>com.hse.zoo.manager</groupId>
+            <artifactId>infrastructure</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Spring Boot Starter Web для REST контроллеров и веб-сервера -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter Validation для валидации входящих запросов (DTO) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- SpringDoc OpenAPI (Swagger) для документации и тестирования API -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter Test для написания интеграционных тестов -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+     <build>
+        <plugins>
+            <!-- Spring Boot Plugin для создания исполняемого JAR -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                 <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project> 
